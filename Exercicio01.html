@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE-edge'/>
+	<script id ='sap-ui-bootstrap' src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+	data-sap-ui-theme='sap_goldreflection'
+	data-sap-ui-libs='sap.ui.commons'>
+	</script>
+	<script>
+	var mainLayout = new sap.ui.layout.VerticalLayout({
+		content: [
+			new sap.ui.commons.TextView({
+				text: "Exercicio 02"
+			}),
+			new sap.ui.commons.HorizontalDivider({
+				type: sap.ui.commons.HorizontalDividerType.Page,
+				height: sap.ui.commons.HorizontalDividerHeight.Large
+			}),
+			new sap.ui.commons.TextView({
+				text: "1) Por que nao conseguiu encontrar os controles na documentacao da API na versao atual?"
+			}),
+			new sap.ui.commons.FormattedTextView({
+				htmlText: "<p>Porque eles foram descontinuados <em>(deprecated</em>).</p>"
+			}),
+			new sap.ui.commons.HorizontalDivider({
+				type: sap.ui.commons.HorizontalDividerType.Area,
+				height: sap.ui.commons.HorizontalDividerHeight.Medium
+			}),
+			new sap.ui.commons.FormattedTextView({
+				htmlText: "2) O que eh <em>deprecated</em>?"
+			}),
+			new sap.ui.commons.FormattedTextView({
+				htmlText: "<p>Algumas vezes um controle pode ser descontinuado. Seja para melhoria no seu algoritmo inicial, ocorrendo grandes modificacoes, ou por ter se tornado obsoleto. Quando ocorre alguma das duas opcoes, a antiga versao eh descontinuada para dar lugar a outra mais abrangente ou por falta de uso.</p>"
+			}),
+			new sap.ui.commons.HorizontalDivider({
+				type: sap.ui.commons.HorizontalDividerType.Area,
+				height: sap.ui.commons.HorizontalDividerHeight.Medium
+			}),
+			new sap.ui.commons.TextView({
+				text: "3) Modificacoes para que controles atuais funcionem nas versoes atuais:"
+			}),
+			new sap.ui.commons.FormattedTextView({
+				htmlText: "<ul>" +
+				"<li>ui.commons.FormattedTextView -> m.FormattedText</li>" +
+				"<li>ui.core.Label -> m.Label</li>" +
+				"<li>ui.commons.Button -> m.Button</li>" +
+				"<li>ui.commons.Link -> m.Link</li>" +
+				"<li>ui.commons.Image -> m.Image</li>" +
+				"</ul>" +
+				"<p>Estes sao alguns exemplos. Mas a maioria dos ui.commons agora sao m.*</p>"
+			})
+		]
+		});
+			
+	mainLayout.placeAt("myPage");
+	</script>
+</head>
+<body class='sapUiBody'>
+	<div id='myPage'></div>
+</body>
+</html>
